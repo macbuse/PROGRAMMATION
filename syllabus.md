@@ -9,7 +9,7 @@
 - requests/beautiful soup
 - expressions regulières
 - pandas
-- scikit
+- scikit/sklearn
 - colab 
 
 
@@ -24,4 +24,4 @@ Je suis pas trop livre mais s'il en faut une alors :
 Si vous voulez avoir une idée de ce qu'on va faire regarder plutot
 les vidéos
 
-- [ici](https://machinelearnia.com/formation-python/)
+- [machinelearnia](https://machinelearnia.com/formation-python/)
