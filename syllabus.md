@@ -15,7 +15,7 @@
 
 ## Livres
 
-Je suis pas trop livre mais s'il en faut une alors :
+Je suis pas trop livre mais s'il en faut un alors :
 
 - [Think Python source sur github](https://github.com/AllenDowney/ThinkPython2)
 - [ThinkPython2.pdf compilé chez moi](./thinkpython2.pdf)
