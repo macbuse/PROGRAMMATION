@@ -25,3 +25,7 @@ Si vous voulez avoir une idée de ce qu'on va faire regarder plutot
 les vidéos
 
 - [machinelearnia](https://machinelearnia.com/formation-python/)
+
+et pour les problèmes
+
+- [stackoverflow](https://stackoverflow.com/questions/tagged/python)
