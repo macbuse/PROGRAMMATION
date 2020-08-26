@@ -21,8 +21,8 @@ Je suis pas trop livre mais s'il en faut un alors :
 - [ThinkPython2.pdf compilé chez moi](./thinkpython2.pdf)
 - [Version française mais payant](https://python.developpez.com/cours/apprendre-python3/)
 
-Si vous voulez avoir une idée de ce qu'on va faire regarder plutot
-les vidéos
+Si vous voulez avoir une idée de ce qu'on va faire regardez plutot
+les vidéos genre :
 
 - [machinelearnia](https://machinelearnia.com/formation-python/)
 
