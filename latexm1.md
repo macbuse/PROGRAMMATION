@@ -152,14 +152,14 @@ Dans TexMaker, les commandes correspondantes se trouvent dans le menu
 Dans le corps d’un texte, les formules mathématiques sont délimitées par un dollar, alors que les formules devant apparaître sur une ligne séparée sont délimitées par deux dollars. On tape par exemple :
 
 ``` {.3D"verbatim"}
- $x+y=0$ =
+ $x^2+y^2=0$ =
 et $x-y=2$.
 ```
 
 et on obtient :
 
 ```math
-x+y=0
+x^2+y^2=0
 ```
 
 
