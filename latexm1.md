@@ -158,9 +158,7 @@ et $x-y=2$.
 
 et on obtient :
 
-```math
-x^2+y^2=0
-```
+<img src="https://render.githubusercontent.com/render/math?math=x^2+y^2=0>
 
 
 alors que si on tape :
