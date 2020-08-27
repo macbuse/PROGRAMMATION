@@ -1,15 +1,13 @@
 
 # UGA Introduction LaTeX  2020
 
-##  Introduction
----------------
+## Introduction
 
 LATEX est le format standard utilisé dans le monde de l’édition mathématique. Il existe des distributions libres de LATEX pour toutes les plateformes (voir les références).
 
 Un document au format LATEX est un texte (au format ASCII) contenant des commandes de formatage. Ces commandes servent à structurer le texte (chapitres, sections, etc.) en laissant au compilateur le soin de rendre cette structure au mieux en fonction du format de sortie (texte imprimé, fichier PDF, sortie HTML pour mettre sur un site Web). Elles gèrent aussi l’affichage des symboles mathématiques, la numérotation des chapitres (chapter), sections, sous-sections (section, subsection), les réfèrences (on place un repère nom avec label puis on se réfère à nom avec ```ref``` ou ```pageref```)
 
 ``` {.3D"verbatim"}
-=20
 \label{toto} puis \ref{toto} ou \pageref{toto}
 ```
 
@@ -18,16 +16,13 @@ ou permettent de créer automatiquement la table des matières (\ -.05truein tab
 La syntaxe d’une commande de formatage LATEX est :
 
 ``` {.3D"verbatim"}
-\command[option]{argument}=20
+\command[option]{argument}
 ```
 
 Il existe dix caractères réservés qui ne sont donc pas imprimés tels quels :
 $ & % # _ { } \
 
 Pour les imprimer, il faut taper :
-
-\$ \& \% \# \_ \{ \} \circonflexe \tild \symbol{92}
-Le passage à la ligne (changement de paragraphe) se fait en insérant une ligne vide, la ligne suivante est alors indentée1
 
 Un espace est crée avec \ -.07truein ⊔.
 
@@ -36,52 +31,30 @@ Un espace est crée avec \ -.07truein ⊔.
 mbol{92}
 ```
 
-Le passage =C3=A0 la ligne (changement de paragraphe) se fait=20 en
-ins=C3=A9rant une ligne vide, la ligne suivante est alors
-indent=C3=A9e^[1](3D%22https://www-fourier.ujf-grenoble.=){#3D"text1"}^
+Le passage à la ligne (changement de paragraphe) se fait en insérant une ligne vide, la ligne suivante est alors indentée1
 
-Un espace est cr=C3= =A9e avec [\\ -.07truein
-]{style="3D"font-family:monospace""}~=\ =E2=8A=94~.
+Un espace est crée avec \ -.07truein ⊔.
 
-2  =C3=89dition, compilation, p= r=C3=A9visualisation et impression. {#3D"sec2" .3D"section"}
 --------------------------------------------------------------------
 
-### 2.1  Choix de l=E2=80=99=C3= =A9diteur, saisie d=E2=80=99un premier document. {#3D"sec3" .3D"subsection"}
+###  Choix de l'éditeur, saisie d'un premier document.
 
-Pour =C3=A9diter votre texte en L^A^T~E~X, vous devez uti= liser un
-=C3=A9diteur comme pour taper le code source d=E2=80=99un programme.=20
-Vous pouvez utiliser n=E2=80=99importe quel =C3=A9diteur si vous en
-connais= sez d=C3=A9j=C3=A0 un, comme par exemple emacs (un =C3=A9diteur
-de fichiers sources C/C++, Java, Python, LaTeX, ... tr=C3= =A8s puissant
-mais qui n=C3=A9cessite un apprentissage...). Sinon, vous pouvez
-apprendre TexMaker qui est un environnement=20 facilitant beaucoup
-l=E2=80=99apprentissage de LaTeX avec des raccourcis clavier compatibles
-Windows et des assistants et barres d=E2= =80=99icones pour saisir les
-symboles math=C3=A9matiques,
+Pour éditer votre texte en LATEX, vous devez utiliser un éditeur comme pour taper le code source d’un programme. Vous pouvez utiliser n’importe quel éditeur si vous en connaissez déjà un, comme par exemple emacs (un éditeur de fichiers sources C/C++, Java, Python, LaTeX, ... très puissant mais qui nécessite un apprentissage...). Sinon, vous pouvez apprendre TexMaker qui est un environnement facilitant beaucoup l’apprentissage de LaTeX avec des raccourcis clavier compatibles Windows et des assistants et barres d’icones pour saisir les symboles mathématiques,
 
-#### 2.1.1  TexMaker {#3D"sec4" .3D"subsubsection"}
+#### TexMaker
 
-Recherchez Texmaker dans les programmes (menu Bureau, pour
-l=E2=80=99installer sur votre ordinateur, voir les liens en fin de
-document) ou ouvrez un terminal=20 (menu Accessoires) et tapez la
-commande [texmaker &]{style="3D"font-family:monospace""}\
-(Si vous avez oubli=C3=A9 le &, tapez Ctrl-Z puis
-[bg]{style="3D"font-family:monospace""}). Cliquez sur Nouveau puis sur
-Assistant dans la barre d=E2=80=99icones, s=C3= =A9lectionnez utf8x au
-lieu de latin1 comme encodage. Ajouter ensuite la partie du texte
-ci-dessous entre=20 `\begin{document}` et `\end{document}`.
+Recherchez Texmaker dans les programmes (menu Bureau, pour l’installer sur votre ordinateur, voir les liens en fin de document) ou ouvrez un terminal (menu Accessoires) et tapez la commande texmaker &
+(Si vous avez oublié le &, tapez Ctrl-Z puis bg). Cliquez sur Nouveau puis sur Assistant dans la barre d’icones, sélectionnez utf8x au lieu de latin1 comme encodage. Ajouter ensuite la partie du texte ci-dessous entre
+`\begin{document}` et `\end{document}`.
 
-#### 2.1.2  Editeur classique.= {#3D"sec5" .3D"subsubsection"}
+#### Editeur classique.
 
-T=C3=A9l=C3=A9chargez le document\
-`www-fourier.ujf-grenoble.fr/~parisse/info/essai.tex`\
-Ouvrez un terminal, puis =C3=A9ditez le document dans le terminal, par
-exem= ple avec [Emacs ]{style="3D"font-family:monospace""} :\
-[emacs essai.tex &]{style="3D"font-family:monospace""}\
-(Si vous avez oubli=C3=A9 le &, tapez Ctrl-Z puis
-[bg]{style="3D"font-family:monospace""}). Vous pouvez aussi cr=C3=A9er
-un nouveau document =C3=A0 partir d=E2=80=99un fichier vide et taper les
-lignes suivantes (sans les commentaires qui commencent par %).
+Téléchargez le document
+www-fourier.ujf-grenoble.fr/~parisse/info/essai.tex
+Ouvrez un terminal, puis éditez le document dans le terminal, par exemple avec Emacs  :
+emacs essai.tex &
+(Si vous avez oublié le &, tapez Ctrl-Z puis bg). Vous pouvez aussi créer un nouveau document à partir d’un fichier vide et taper les lignes suivantes (sans les commentaires qui commencent par %).
+
 
 ``` {.3D"verbatim"}
 \documentclass[a4paper,11pt]{article}  % 11 ou =
@@ -122,141 +95,71 @@ On a vu (section \ref{sec:tradu}) ...  % une r=C3=A9f=C3=A9rence au label
 \end{document}                         % fin du document=20
 ```
 
-Pour traduire les diff=C3=A9rentes commandes de votre texte, il faut le
-com= piler.
 
-#### 2.2.1  Texmaker {#3D"sec7" .3D"subsubsection"}
+Pour traduire les différentes commandes de votre texte, il faut le compiler.
 
-Vous devez d=E2=80=99abord sauver votre texte, =C3=A0 la souris, icone
-disq= uette ou menu Fichier -&gt; Enregistrer ou au clavier Ctrl-S.
-Cliquez ensuite sur l=E2=80=99icone =C3=A0 gauche de Compilation rapide
-dan= s la barre d=E2=80=99icones (vous pouvez s=C3=A9lectionner un autre
-format de rendu: p= ar exemple=20 le format Latex et le rendu DVI, ce
-dernier se met =C3=A0 jour automatiquem= ent). S=E2=80=99il y a des
-erreurs, elles apparaissent num=C3=A9rot=C3=A9es en-de= ssous, en
-cliquant sur le num=C3=A9ro, on positionne le curseur dans le texte
-source =C3=A0 l=E2=80= =99endroit de l=E2=80=99erreur.
 
-#### 2.2.2  =C3=89diteur class= ique. {#3D"sec8" .3D"subsubsection"}
+#### Texmaker 
 
-Vous devez d=E2=80=99abord sauver votre texte, par exemple avec emacs
-=C3=A0 la souris, icone disquette ou menu [Files -&gt; Save current
-buff= er]{style="3D"font-family:monospace""} ou au clavier en tapant=20
-([Ctrl-X Ctrl-S]{style="3D"font-family:monospace""} sous emacs).=20 Puis
-compilez en tapant dans la fen=C3=AAtre de commandes (Konsole ou
-xterm) :\
-[latex essai]{style="3D"font-family:monospace""}\
-Dans emacs, vous pouvez aussi utiliser le menu [Tex-&gt; Tex
-file]{style="3D"font-family:m=" onospace"=""}.
+Vous devez d’abord sauver votre texte, à la souris, icone disquette ou menu Fichier -> Enregistrer ou au clavier Ctrl-S. Cliquez ensuite sur l’icone à gauche de Compilation rapide dans la barre d’icones (vous pouvez sélectionner un autre format de rendu: par exemple le format Latex et le rendu DVI, ce dernier se met à jour automatiquement). S’il y a des erreurs, elles apparaissent numérotées en-dessous, en cliquant sur le numéro, on positionne le curseur dans le texte source à l’endroit de l’erreur.
 
-La compilation se fait avec tradu= ction en un fichier
-[essai.dvi]{style="3D"font-family:monospace""} = ou, avec un arr=C3=AAt
-=C3=A0 la premi=C3=A8re erreur rencontr=C3=A9e. Lorsque une erreur est
-d=C3=A9tect=C3=A9e depuis emacs, un message apparait= indiquant, la
-nature de l=E2=80=99erreur et la ligne o=C3=B9 elle se situe.
 
-Tapez = sur la touche `Entree` pour continuer ou tapez `x` puis
-`Entre= e`=20 pour interrompre la compilation. Corrigez votre erreur
-dans l=E2=80=99=C3=A9diteur et recompilez. Si vous avez compil=C3=A9
-avec le men= u [Tex-&gt;Tex file]{style="3D"font-family:monospace""}
-d=E2=80=99ema= cs, vous pouvez consulter le fichier [=
-essai.log]{style="3D"font-family:monospace""} pour d=C3=A9terminer les
-erreurs =C3=A0 corriger.
+#### Éditeur classique.
+Vous devez d’abord sauver votre texte, par exemple avec emacs à la souris, icone disquette ou menu Files -> Save current buffer ou au clavier en tapant (Ctrl-X Ctrl-S sous emacs). Puis compilez en tapant dans la fenêtre de commandes (Konsole ou xterm) :
+latex essai
+Dans emacs, vous pouvez aussi utiliser le menu Tex-> Tex file.
 
-Pour visualiser votre te= xte avant l=E2=80=99impression, utilisez le
-menu [Tex-&gt;Tex view]{style="3D"font-family:monospace""} dans = emacs
-ou tapez dans la fen=C3=AAtre de commandes :\
-[xdvi essai &]{style="3D"font-family:monospace""}
+La compilation se fait avec traduction en un fichier essai.dvi ou, avec un arrêt à la première erreur rencontrée. Lorsque une erreur est détectée depuis emacs, un message apparait indiquant, la nature de l’erreur et la ligne où elle se situe.
 
-Si la p= age de visualisation n=E2=80=99est pas mise =C3=A0 jour lorsque
-vous compilez =C3=A0 nouveau, vous devez quitter `xdvi` en tapan= t sur
-la touche `q` et le relancer comme ci-dessus.
+Tapez sur la touche Entree pour continuer ou tapez x puis Entree pour interrompre la compilation. Corrigez votre erreur dans l’éditeur et recompilez. Si vous avez compilé avec le menu Tex->Tex file d’emacs, vous pouvez consulter le fichier essai.log pour déterminer les erreurs à corriger.
 
-### 2.3  L=E2=80=99impression {#3D"sec9" .3D"subsection"}
+Pour visualiser votre texte avant l’impression, utilisez le menu Tex->Tex view dans emacs ou tapez dans la fenêtre de commandes :
+xdvi essai &
 
-Pour imprimer (attention ne le faites pas maintenant!),=20 vous
-cliquerez dans TexMaker sur l=E2=80=99icone d=E2=80=99imprimante ou vous
-taperez dans le fen=C3=AAtre de commandes :\
-`dvips essai`
+Si la page de visualisation n’est pas mise à jour lorsque vous compilez à nouveau, vous devez quitter xdvi en tapant sur la touche q et le relancer comme ci-dessus.
 
-### 2.4  Cr=C3=A9er des fichier= s PDF et HTML =C3=A0 partir d=E2=80=99un source L^A^T~E~X= {#3D"sec10" .3D"subsection"}
 
-Si vous utilisez la commande [pdflatex=
-]{style="3D"font-family:monospace""} =C3=A0 la place de la commande
-[latex]{style="3D"font-family:monospace""}, le compilateur=
-g=C3=A9n=C3=A9re un fichier [.pdf]{style="3D"font-family:monospace""} au
-format PDF (que l=E2= =80=99on peut lire avec Acrobrat Reader ou sous
-Unix avec [gv]{style="3D"font-family:monospace""} ou `= evince`). On
-peut aussi convertir un fichier DVI en fichier PDF par la commande [dv=
-ipdf]{style="3D"font-family:monospace""}.
+### L’impression
+Pour imprimer (attention ne le faites pas maintenant!), vous cliquerez dans TexMaker sur l’icone d’imprimante ou vous taperez dans le fenêtre de commandes :
+dvips essai
 
-Pour obtenir une sortie HTML, utilisez la commande hevea ou
-[latex2html]{style="3D"font-family:monospace""} (disponible sur cer=
-tains syst=C3=A8mes seulement).
 
-3  Les environnements LA&lt;= /sup&gt;T~E~X {#3D"sec11" .3D"section"}
--------------------------------------------
+### Créer des fichiers PDF et HTML à partir d’un source LATEX
+Si vous utilisez la commande pdflatex à la place de la commande latex, le compilateur génére un fichier .pdf au format PDF (que l’on peut lire avec Acrobrat Reader ou sous Unix avec gv ou evince). On peut aussi convertir un fichier DVI en fichier PDF par la commande dvipdf.
 
-Dans TexMaker, les commandes correspondantes se trouvent dans le menu
-LaTeX.
+Pour obtenir une sortie HTML, utilisez la commande hevea ou latex2html (disponible sur certains systèmes seulement).
 
-C=E2=80=99est une part= ie du document d=C3=A9limit=C3=A9e par:\
-`\begin{type d'environnement}...\end{type d'environnement}`\
-Voici quelques environnements souvent utilis=C3=A9s :
 
--   `\begin{verbatim}` ... `\end{verbatim}` :=20 pas
-    d=E2=80=99interpr=C3=A9tation des commandes,=20 le texte est mis en
-    style [\\ -.05truei= n texttt]{style="3D"font-family:monospace""}=20
-    (contrairement =C3=A0 [{\\ -.05truein t=
-    t...}]{style="3D"font-family:monospace""} qui met en style=20 [\\
-    -.05truein texttt]{style="3D"font-family:monospace""} mais inter=
-    pr=C3=A9te...)=20
--   `\begin{itemize}` ... `\end{i= temize}` ou=20 `\begin{enumerate}`
-    ... `\end{enumerate}` :=20 permet d=E2=80=99=C3=A9numerer une liste
-    ; chaque =C3=A9lement de la liste = doit commencer par=20 [\\
-    -.05truein item]{style="3D"font-family:monospace""}\
-    La diff=C3=A9rence est que enumerate&lt;= /span&gt; num=C3=A9rote
-    les items
+Les environnements LATEX
+Dans TexMaker, les commandes correspondantes se trouvent dans le menu LaTeX.
+
+C’est une partie du document délimitée par:
+`\begin{type d'environnement}...\end{type d'environnement}`
+
+
+-   `\begin{verbatim}` ... `\end{verbatim}` : pas d’interprétation des commandes, le texte est mis en style \ -.05truein texttt (contrairement à {\ -.05truein tt...} qui met en style \ -.05truein texttt mais interpréte...)
+-    `\begin{itemize}` ... `\end{i= temize}` ou=20 `\begin{enumerate}`
+    ... `\end{enumerate}` :permet d’énumerer une liste ; chaque élement de la liste doit commencer par \ -.05truein item
+La différence est que enumerate numérote les items
 -   `\begin{center}` ... `\end{ce= nter}` permet de centrer un texte
--   `\begin{tabular}{|l|c|r|r|}` ... &lt;= code&gt;\\end{tabular} :=20
-    cr=C3=A9e un tableau. Le nombre d=E2=80=99arguments (ici 4) indique
-    le nomb= re de=20 colonnes. Ces arguments d=C3=A9finissent
-    l=E2=80=99alignement [l]{style="3D"font-family:monospace""}
-    (left),[c]{style="3D"font-f=" monospace"=""} (center), [r=
-    ]{style="3D"font-family:monospace""} (right). On tape les lignes
-    du=20 tableau en s=C3=A9parant les colonnes par &. Chaque ligne est
-    termin=C3= =A9e par=20 la commande [\\ -.07truein\\
-    ]{style="3D"font-family:monospace""}. Si= on =C3=A9crit la commande
-    [\\ -.05truein hline]{style="3D"font-family:monospace""} apr=C3=A8s
-    = une fin de ligne, cela affichera un=20 trait de s=C3=A9paration
-    horizontal, Pour les traits de s=C3=A9paration verticaux, utiliser
-    [|]{style="3D"font-family:monospace""} dans l= =E2=80=99argument.
--   =E2=80=9CException=E2=80=9D: pour mettre une = partie de texte en
-    italique, on =C3=A9crit `{\em ... }`, en gras `{\bf ...}`.
+-   `\begin{tabular}{|l|c|r|r|}` ... &lt;= code&gt;\\end{tabular} :crée un tableau. Le nombre d’arguments (ici 4) indique le nombre de colonnes. Ces arguments définissent l’alignement l (left),c (center), r (right). On tape les lignes du tableau en séparant les colonnes par &. Chaque ligne est terminée par la commande \ -.07truein\ . Si on écrit la commande \ -.05truein hline après une fin de ligne, cela affichera un trait de séparation horizontal, Pour les traits de séparation verticaux, utiliser | dans l’argument.
+-  “Exception”: pour mettre une partie de texte en italique, on écrit `{\textit ... }`, en gras `{\bf ...}`.
 
-4  L=E2=80=99environnement mat= h=C3=A9matique {#3D"sec12" .3D"section"}
-----------------------------------------------
-
+## L’environnement mathématique
 Dans TexMaker, les commandes correspondantes se trouvent dans le menu
-Maths.
 
-### 4.1  Le mode math=C3=A9mati= que {#3D"sec13" .3D"subsection"}
-
-Dans le corps d=E2=80=99un texte, les formules math=C3=A9matiques sont
-d=C3= =A9limit=C3=A9es par un dollar, alors que les formules devant
-appara=C3=AEtre sur une ligne s=C3= =A9par=C3=A9e=20 sont
-d=C3=A9limit=C3=A9es par deux dollars. On tape par exemple :
+### Le mode mathématique
+Dans le corps d’un texte, les formules mathématiques sont délimitées par un dollar, alors que les formules devant apparaître sur une ligne séparée sont délimitées par deux dollars. On tape par exemple :
 
 ``` {.3D"verbatim"}
- Consid=C3=A9rons les =C3=A9quations $x+y=3D0$ =
-et $x-y=3D2$.
+ $x+y=0$ =
+et $x-y=2$.
 ```
 
 et on obtient :
 
-Consid=C3=A9rons les =C3=A9quations x+[=
-y]{style="3D"font-style:italic""}=3D0 et
-[x]{style="3D"font-style:italic""}=E2=88=92[y]{st="yle=3D"font-style:italic""}=3D2
+\[x+y=0\]
+
 
 alors que si on tape :
 
