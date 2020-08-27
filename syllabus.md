@@ -1,4 +1,7 @@
-# Syllabus
+
+
+
+## Syllabus
 
 - Markdown/TeX/html (pandoc)
 - csv/xls/json/jpg/png/svg/stl
@@ -11,6 +14,30 @@
 - pandas
 - scikit/sklearn
 - colab 
+
+## Evaluation
+
+Sur projet
+
+### Idées de projets:
+
+- Algorithmes de base sur les graphes (déterminer la connexité, trouver un plus court chemin entre deux points, trouver un arbre couvrant, déterminer la planarité, trouver des chemins eulériens, hamiltoniens)
+- Calcul de l'ordre d'un groupe de matrices
+- Groupes de Coxeter, orbites de facettes
+- Pavages du plan euclidien (puis du plan hyperbolique, de la sphère)
+- Domaines de Dirichlet/Voronoi
+- Mandelbrot, ensembles de Julia
+- Arithmétique et applications (Cryptographie RSA, correction d'erreurs)
+- Puissance 4 (interface de jeu/intelligence artificielle)
+- Master Mind (interface de jeu/intelligence artificielle)
+- Google Page Rank (exemples simples, puis extraire données réelles)
+Autour du Rubik (versions simplifiées, etc)
+- Sudoku (résolution d'une grille, constructeur de grilles avec solution unique, estimer la difficulté d'une grille)
+- Solver Euclidea
+- Triangulations de polygones
+- Combinatoire des enveloppes convexes
+- Duijvestijn (trouver le plus petit pavage d'un carré par des carrés tous de tailles différentes)
+- Carrés insécables (pas de droite orthogonale aux côtés pavée par des côtés du carré), configurations optimales de carrés nxn insécables avec le moins/le plus de petits carrés
 
 
 ## Livres
@@ -26,6 +53,6 @@ les vidéos genre :
 
 - [machinelearnia](https://machinelearnia.com/formation-python/)
 
-et pour les problèmes
+et pour résoudre les petits problèmes :
 
 - [stackoverflow](https://stackoverflow.com/questions/tagged/python)
