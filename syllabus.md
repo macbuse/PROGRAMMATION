@@ -38,7 +38,6 @@ Autour du Rubik (versions simplifiées, etc)
 - Triangulations de polygones
 - Combinatoire des enveloppes convexes
 - Duijvestijn (trouver le plus petit pavage d'un carré par des carrés tous de tailles différentes)
-- Carrés insécables (pas de droite orthogonale aux côtés pavée par des côtés du carré), configurations optimales de carrés nxn insécables avec le moins/le plus de petits carrés
 - Reseaux de neurones avec
     [Keras/TensorFlow](https://www.tensorflow.org/hub/tutorials/tf2_image_retraining)
 - Créer un plugin pour [Inkscape](https://inkscape.org/) ou
