@@ -29,21 +29,20 @@ Sur projet
 - Groupes de Coxeter, orbites de facettes
 - Pavages du plan euclidien (puis du plan hyperbolique, de la sphère)
 - Domaines de Dirichlet/Voronoi
-- Mandelbrot, ensembles de Julia
 - Arithmétique et applications (Cryptographie RSA, correction d'erreurs)
 - Puissance 4 / Master Mind (interface de jeu/intelligence artificielle)
 - Chemins dans un labyrinthe, Algorithme de Dijsktra
 - Google Page Rank (exemples simples, puis extraire données réelles)
 Autour du Rubik (versions simplifiées, etc)
 - Sudoku (résolution d'une grille, constructeur de grilles avec solution unique, estimer la difficulté d'une grille)
-- Solver Euclidea
 - Triangulations de polygones
 - Combinatoire des enveloppes convexes
 - Duijvestijn (trouver le plus petit pavage d'un carré par des carrés tous de tailles différentes)
 - Carrés insécables (pas de droite orthogonale aux côtés pavée par des côtés du carré), configurations optimales de carrés nxn insécables avec le moins/le plus de petits carrés
-- Reseau de neurones avec
+- Reseaux de neurones avec
     [Keras/TensorFlow](https://www.tensorflow.org/hub/tutorials/tf2_image_retraining)
-
+- Créer un plugin pour [Inkscape](https://inkscape.org/) ou
+    [Blender](https://www.blender.org/)
 
 ## Livres
 
