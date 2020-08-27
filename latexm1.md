@@ -159,7 +159,8 @@ et $x-y=2$.
 et on obtient :
 
 ```math
-x+y=0```
+x+y=0
+```
 
 
 alors que si on tape :
