@@ -1,5 +1,8 @@
+# Introduction à la programmation L3 - 2020-21
 
+Horaire du cours:
 
+Vendredi 13h45-17h (salle Carism).
 
 ## Syllabus
 
