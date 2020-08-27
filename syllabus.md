@@ -11,7 +11,7 @@ Vendredi 13h45-17h (salle Carism).
 - introduction à python/JuPyteR/github
 - matplotlib
 - algorithmes de bases
-- numpy/alg linéaire
+- numpy/scipy + alg linéaire
 - requests/beautiful soup
 - expressions regulières
 - pandas
@@ -31,8 +31,8 @@ Sur projet
 - Domaines de Dirichlet/Voronoi
 - Mandelbrot, ensembles de Julia
 - Arithmétique et applications (Cryptographie RSA, correction d'erreurs)
-- Puissance 4 (interface de jeu/intelligence artificielle)
-- Master Mind (interface de jeu/intelligence artificielle)
+- Puissance 4 / Master Mind (interface de jeu/intelligence artificielle)
+- Chemins dans un labyrinthe, Algorithme de Dijsktra
 - Google Page Rank (exemples simples, puis extraire données réelles)
 Autour du Rubik (versions simplifiées, etc)
 - Sudoku (résolution d'une grille, constructeur de grilles avec solution unique, estimer la difficulté d'une grille)
@@ -41,6 +41,8 @@ Autour du Rubik (versions simplifiées, etc)
 - Combinatoire des enveloppes convexes
 - Duijvestijn (trouver le plus petit pavage d'un carré par des carrés tous de tailles différentes)
 - Carrés insécables (pas de droite orthogonale aux côtés pavée par des côtés du carré), configurations optimales de carrés nxn insécables avec le moins/le plus de petits carrés
+- Reseau de neurones avec
+    [Keras/TensorFlow](https://www.tensorflow.org/hub/tutorials/tf2_image_retraining)
 
 
 ## Livres

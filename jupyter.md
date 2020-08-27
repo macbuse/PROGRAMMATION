@@ -7,6 +7,7 @@ calepins ou notebooks, c'est-à-dire des programmes contenant à la fois du text
 en markdown et du code en Julia, Python, R... Ces calepins sont utilisés en
 science des données pour explorer et analyser des données.
 
+
 ### Comment utiliser Jupyter
 
 1. [Installer](https://docs.anaconda.com/anaconda/install/) sur sa machine avec Anaconda.
@@ -36,6 +37,8 @@ Le module NumPy est incontournable pour faire des calculs numériques. Il permet
 ## Pandas 
 
 Le module pandas a été conçu pour l'analyse de données. Il est particulièrement puissant pour manipuler des données structurées sous forme de tableau. Avec pandas on peut analyser des données obtenues à partir des fichiers Excel (xls/csv).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zZkNOdBWgFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Matplotlib
 
