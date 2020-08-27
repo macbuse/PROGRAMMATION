@@ -68,9 +68,17 @@ Si rep est un répertoire, mv fichier1.cc rep déplace le fichier1.cc dans le so
 man ls
 pour en savoir plus sur la commande ls.
 
-### Exercice:
+### Exercice :
 
 Copier une page web avec wget et afficher son contenu avec less.
+
+---
+Pour savoir plus : 
+
+- [commandes unix](https://www.guru99.com/must-know-linux-commands.html)
+- wget
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9qkipzxX1sQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Noms et fonction de quelques logiciels.
@@ -78,11 +86,9 @@ Ces noms de commande vous permettront de lancer les logiciels correspondants dep
 
 1. emacs: éditeur de texte.
 1. firefox: navigateur Internet. Pour utiliser le courrier électronique avec netscape, il vous faudra configurer votre adresse électronique. Permet également de lire des fichiers .html
-1. abiword: traitement de texte non scientifique
 1. texmacs ou lyx: traitement de texte scientifique particulièrement adapté à la saisie d’équations. Attention à ne pas confondre éditeur de texte et traitement de texte on n’utilise pas lyx pour écrire un programme en C++ (cf. section 3.1).
 1. gnumeric (GNU/Linux): tableur, permet par exemple de lire des fichiers .xls
 1. xpdf ou acroread: pour lire des fichiers PDF (d’extension .pdf)
-1. xdvi: visualiser des fichiers DVI (d’extension .dvi)
 1. gv ou ghostview: visualiser des fichiers Postscript (d’extension .ps)
 1. gimp (GNU/Linux): traitement d’images par exemple de fichiers d’extension .gif, .png
 1. lp ou lpr: imprime un fichier.
@@ -91,30 +97,3 @@ Ces noms de commande vous permettront de lancer les logiciels correspondants dep
 1. xcas: logiciel de calcul formel et géométrie interactive
 etc.
 
-
-## Jupyter
-
-Jupyter est une application web utilisée pour programmer dans plus de 40
-langages de programmation, dont Python, Julia, Ruby, R, ou encore Scala2.
-Jupyter est une évolution du projet IPython. Jupyter permet de réaliser des
-calepins ou notebooks, c'est-à-dire des programmes contenant à la fois du texte
-en markdown et du code en Julia, Python, R... Ces calepins sont utilisés en
-science des données pour explorer et analyser des données.
-
-1. [Installer](https://docs.anaconda.com/anaconda/install/) sur sa machine avec Anaconda.
-1. [Utiliser](https://mybinder.org/) en ligne sans installation.
-1. Avec un compte Google sur
-   [colab](https://colab.research.google.com/notebooks/intro.ipynb)
-
-### Tutos
-
-
-Il y a enormement de tutos en ligne.
-
-- en anglais
-    [tutorial](https://towardsdatascience.com/the-complete-guide-to-jupyter-notebooks-for-data-science-8ff3591f69a4)
-- en français  [un tuto](https://python.sdv.univ-paris-diderot.fr/18_jupyter/)
-sur l'application  
-- une vidéo :
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Rc4JQWowG5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
