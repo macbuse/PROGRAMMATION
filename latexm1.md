@@ -152,34 +152,28 @@ Dans TexMaker, les commandes correspondantes se trouvent dans le menu
 Dans le corps d’un texte, les formules mathématiques sont délimitées par un dollar, alors que les formules devant apparaître sur une ligne séparée sont délimitées par deux dollars. On tape par exemple :
 
 ``` {.3D"verbatim"}
- $x^2+y^2=0$ =
-et $x-y=2$.
+$x^2+y^2=0  et  x+y=0$
 ```
 
-et on obtient :
+on obtient :
 
-<img src="https://render.githubusercontent.com/render/math?math=x^2+y^2=0>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=x^2&plus;y^2=0&space;et&space;x&plus;y=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^2&plus;y^2=0&space;et&space;x&plus;y=0" title="x^2+y^2=0 et x+y=0" /></a>
 
 alors que si on tape :
 
 ``` {.3D"verbatim"}
- Consid=C3=A9rons les =C3=A9quations \[x+y=3D0 =
-\ \mbox{et} \ x-y=3D2\]
+$x^2+y^2=0 \text{ et } x+y=0$
 ```
 
-on obtient (la commande [\\ -.= 05truein
-mbox]{style="3D"font-family:monospace""} permet d=E2=80=99=C3=A9crire=20
-du texte dans une formule) :
+et on obtient :
 
-Consid=C3=A9rons les =C3=A9quations
+<a href="https://www.codecogs.com/eqnedit.php?latex=x^2&plus;y^2=0&space;\text{&space;et}&space;x&plus;y=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^2&plus;y^2=0&space;\text{&space;et&space;}&space;x&plus;y=0" title="x^2+y^2=0 \text{ et} x+y=0" /></a>
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [x]{style="3D"font-style:italic""}+[y]{styl="e=3D"font-style:italic""}=3D0  et  [x]{style="=3D"font-style:italic""}=E2=88=92[y= ]{style="3D"font-style:italic""}=3D2
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+on obtient (la commande `\text` permet d’écrire du texte dans une formule) :
 
-On peut aussi obtenir une =C3=A9quation num=C3=A9rot=C3= =A9e avec
-l=E2=80=99environnement `equation` :
+
+On peut aussi obtenir une équation numérotée avec l’environnement equation :
+
 
 ``` {.3D"verbatim"}
 \begin{equation} \label{eq:def_x}
@@ -189,51 +183,27 @@ x =3D \sqrt{y+z}
 
 ce qui donne :\
 
-+-----------------+-----------------+-----------------+-----------------+
-|  [ ]{#3D"eq:def | [=E2=88=9A]{sty |   ------------- |     (1)         |
-| _x"}            | le="3D"font-siz | --------------- |                 |
-| [x]{style="3D"f | e:x-large""}    | --------------- |                 |
-| ont-style:itali |                 | --------------- |                 |
-| c""} =3D        |                 | ------------    |                 |
-|                 |                 |   [y]{style="3D |                 |
-|                 |                 | "font-=" italic |                 |
-|                 |                 | "=""}+[z]{style |                 |
-|                 |                 | ="3D"font-style |                 |
-|                 |                 | :italic""}      |                 |
-|                 |                 |   ------------- |                 |
-|                 |                 | --------------- |                 |
-|                 |                 | --------------- |                 |
-|                 |                 | --------------- |                 |
-|                 |                 | ------------    |                 |
-+-----------------+-----------------+-----------------+-----------------+
+![tt](./numbered.png)
 
-### 4.2  Les fractions {#3D"sec14" .3D"subsection"}
+### Les fractions
 
 Une fraction s=E2=80=99obtient avec la commande=20 [\\ -.05truein
 frac]{style="3D"font-family:monospace""} ([\\ -.05truein
 overline]{style="=3D"font-family:monospace""} surligne)
 
 ``` {.3D"verbatim"}
-\[\frac{x}{2y}=3D0.4\overline{230769}\]
+\[\frac{x}{2y}= 0.4\overline{230769}\]
 ```
 
 donne :
 
-  ----------------------------------------
-  [x]{style="3D"font-style=" italic"=""}
-  2[y]{style="3D"font-st=" italic"=""}
-  ----------------------------------------
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{x}{2y}=&space;0.4\overline{230769}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{x}{2y}=&space;0.4\overline{230769}" title="\frac{x}{2y}= 0.4\overline{230769}" /></a>
 
-=3D0.4
 
-230769
+### Les indices, les exposants et les flèches de vecteurs
 
-### 4.3  Les indices, les expos= ants et les fl=C3=A8ches de vecteurs {#3D"sec15" .3D"subsection"}
+Les indices s’obtiennent avec le caractère _ , les exposants avec le caractère et les flèches de vecteurs avec la commande `\overrightarrow`
 
-Les indices s=E2=80=99obtiennent avec le caract=C3=A8re \_ , les
-exposants a= vec le caract=C3=A8re et les fl=C3=A8ches de vecteurs avec
-la commande [\\ -.05truein
-overrightarrow]{style="3D"font-family:monospace""}
 
 Exemple :
 
@@ -244,52 +214,9 @@ Exemple :
 
 donne :
 
-+-----------------------------------+-----------------------------------+
-| [=                                | +-------------------------------- |
-| x]{style="3D"font-style:italic""} | --------------------------------- |
-| ~1~=3D([a]{style="3D"font-style:i | ------+                           |
-| talic""}2+[b]{style="3D"font-styl | |   -----                         |
-| e:italic""}^2^)                   |                                   |
-|                                   |       |                           |
-|                                   | |    1                            |
-|                                   |                                   |
-|                                   |       |                           |
-|                                   | |   2                             |
-|                                   |                                   |
-|                                   |       |                           |
-|                                   | |   -----                         |
-|                                   |                                   |
-|                                   |       |                           |
-|                                   | +-------------------------------- |
-|                                   | --------------------------------- |
-|                                   | ------+                           |
-|                                   | |                                 |
-|                                   |                                   |
-|                                   |       |                           |
-|                                   | +-------------------------------- |
-|                                   | --------------------------------- |
-|                                   | ------+                           |
-+-----------------------------------+-----------------------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_1={(a^2&plus;b^2)}^\frac{&space;1&space;}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_1={(a^2&plus;b^2)}^\frac{&space;1&space;}{2}" title="x_1={(a^2+b^2)}^\frac{ 1 }{2}" /></a>
 
-------------------------------------------------------------------------
-
-=E2=96=B8
-
-[OA]{sty="le=3D"font-style:italic""}~1,[=\ i]{style="3D"font-style:italic""}~
-
- 
-
-=3D[x]{style="3D"font-style:itali="
-c"=""}^2[t]{style="3D"font-style:italic""}^=C2=B7&nbs= p;
-
-&lt;= tbody&gt;
-
-------------------------------------------------------------------------
-
-= =E2=96=B8
-
-[OB]{sty="le=3D"font-style:italic""}~i&lt;=\ /span&gt;~
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\overrightarrow{OA_{1,i}}=x^{2t}\cdot&space;\overrightarrow{OB_i}\" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\overrightarrow{OA_{1,i}}=x^{2t}\cdot&space;\overrightarrow{OB_i}\" title="\overrightarrow{OA_{1,i}}=x^{2t}\cdot \overrightarrow{OB_i}\" /></a>
  
 
 #### 4.3.1  Les racines {#3D"sec16" .3D"subsubsection"}
