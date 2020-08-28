@@ -1,6 +1,12 @@
 
 # UGA Introduction LaTeX  2020
 
+
+Si vous avez le temps regardez la vidéo avant de lire le texte
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PRZ3cqjE1-4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Introduction
 
 LATEX est le format standard utilisé dans le monde de l’édition mathématique. Il existe des distributions libres de LATEX pour toutes les plateformes (voir les références).
