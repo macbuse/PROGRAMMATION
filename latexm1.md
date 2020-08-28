@@ -7,15 +7,15 @@ LATEX est le format standard utilisé dans le monde de l’édition mathématiqu
 
 Un document au format LATEX est un texte (au format ASCII) contenant des commandes de formatage. Ces commandes servent à structurer le texte (chapitres, sections, etc.) en laissant au compilateur le soin de rendre cette structure au mieux en fonction du format de sortie (texte imprimé, fichier PDF, sortie HTML pour mettre sur un site Web). Elles gèrent aussi l’affichage des symboles mathématiques, la numérotation des chapitres (chapter), sections, sous-sections (section, subsection), les réfèrences (on place un repère nom avec label puis on se réfère à nom avec ```ref``` ou ```pageref```)
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 \label{toto} puis \ref{toto} ou \pageref{toto}
 ```
 
-ou permettent de créer automatiquement la table des matières (\ -.05truein tableofcontents). Une fois saisi, le texte source LATEX doit être compilé (parfois deux fois de suite pour mettre à jour les références et la table des matières). Le compilateur ne tient pas compte de la mise en page du texte source, le nombre d’espace entre deux mots est ignoré de même que le passage à la ligne. Seuls les sauts de lignes sont interprétés comme signalant un début de paragraphe.
+ou permettent de créer automatiquement la table des matières (\tableofcontents). Une fois saisi, le texte source LATEX doit être compilé (parfois deux fois de suite pour mettre à jour les références et la table des matières). Le compilateur ne tient pas compte de la mise en page du texte source, le nombre d’espace entre deux mots est ignoré de même que le passage à la ligne. Seuls les sauts de lignes sont interprétés comme signalant un début de paragraphe.
 
 La syntaxe d’une commande de formatage LATEX est :
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 \command[option]{argument}
 ```
 
@@ -24,16 +24,14 @@ $ & % # _ { } \
 
 Pour les imprimer, il faut taper :
 
-Un espace est crée avec \ -.07truein ⊔.
+Un espace est crée avec \⊔.
 
-``` {.3D"verbatim"}
-\$ \& \% \# \_ \{ \} \circonflexe \tild \sy=
-mbol{92}
+``` {."verbatim"}
+\$ \& \% \# \_ \{ \} \circonflexe \tild \symbol{92}
 ```
 
-Le passage à la ligne (changement de paragraphe) se fait en insérant une ligne vide, la ligne suivante est alors indentée1
+Le passage à la ligne (changement de paragraphe) se fait en insérant une ligne vide, la ligne suivante est alors indentée.
 
-Un espace est crée avec \ -.07truein ⊔.
 
 --------------------------------------------------------------------
 
@@ -44,7 +42,7 @@ Pour éditer votre texte en LATEX, vous devez utiliser un éditeur comme pour ta
 #### TexMaker
 
 Recherchez Texmaker dans les programmes (menu Bureau, pour l’installer sur votre ordinateur, voir les liens en fin de document) ou ouvrez un terminal (menu Accessoires) et tapez la commande texmaker &
-(Si vous avez oublié le &, tapez Ctrl-Z puis bg). Cliquez sur Nouveau puis sur Assistant dans la barre d’icones, sélectionnez utf8x au lieu de latin1 comme encodage. Ajouter ensuite la partie du texte ci-dessous entre
+(Si vous avez oublié le &, tapez Ctrl-Z puis bg). Cliquez sur Nouveau puis sur Assistant dans la barre d’icones, sélectionnez utf8 au lieu de latin1 comme encodage. Ajouter ensuite la partie du texte ci-dessous entre
 `\begin{document}` et `\end{document}`.
 
 #### Editeur classique.
@@ -56,7 +54,7 @@ emacs essai.tex &
 (Si vous avez oublié le &, tapez Ctrl-Z puis bg). Vous pouvez aussi créer un nouveau document à partir d’un fichier vide et taper les lignes suivantes (sans les commentaires qui commencent par %).
 
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 \documentclass[a4paper,11pt]{article}  % 11 ou =
 12pt, article ou report ou book=20
 \usepackage[utf8]{inputenc}            % caract=C3=A8res accentu=C3=A9s en =
@@ -137,12 +135,12 @@ C’est une partie du document délimitée par:
 `\begin{type d'environnement}...\end{type d'environnement}`
 
 
--   `\begin{verbatim}` ... `\end{verbatim}` : pas d’interprétation des commandes, le texte est mis en style \ -.05truein texttt (contrairement à {\ -.05truein tt...} qui met en style \ -.05truein texttt mais interpréte...)
+-   `\begin{verbatim}` ... `\end{verbatim}` : pas d’interprétation des commandes, le texte est mis en style \texttt  (contrairement à {\tt...} qui met en style \texttt mais interpréte...)
 -    `\begin{itemize}` ... `\end{i= temize}` ou=20 `\begin{enumerate}`
-    ... `\end{enumerate}` :permet d’énumerer une liste ; chaque élement de la liste doit commencer par \ -.05truein item
+    ... `\end{enumerate}` :permet d’énumerer une liste ; chaque élement de la liste doit commencer par \item
 La différence est que enumerate numérote les items
 -   `\begin{center}` ... `\end{ce= nter}` permet de centrer un texte
--   `\begin{tabular}{|l|c|r|r|}` ... &lt;= code&gt;\\end{tabular} :crée un tableau. Le nombre d’arguments (ici 4) indique le nombre de colonnes. Ces arguments définissent l’alignement l (left),c (center), r (right). On tape les lignes du tableau en séparant les colonnes par &. Chaque ligne est terminée par la commande \ -.07truein\ . Si on écrit la commande \ -.05truein hline après une fin de ligne, cela affichera un trait de séparation horizontal, Pour les traits de séparation verticaux, utiliser | dans l’argument.
+-   `\begin{tabular}{|l|c|r|r|}` ... &lt;= code&gt;\\end{tabular} :crée un tableau. Le nombre d’arguments (ici 4) indique le nombre de colonnes. Ces arguments définissent l’alignement l (left),c (center), r (right). On tape les lignes du tableau en séparant les colonnes par &. Chaque ligne est terminée par la commande \\ . Si on écrit la commande \hline après une fin de ligne, cela affichera un trait de séparation horizontal, Pour les traits de séparation verticaux, utiliser | dans l’argument.
 -  “Exception”: pour mettre une partie de texte en italique, on écrit `{\textit ... }`, en gras `{\bf ...}`.
 
 ## L’environnement mathématique
@@ -151,7 +149,7 @@ Dans TexMaker, les commandes correspondantes se trouvent dans le menu
 ### Le mode mathématique
 Dans le corps d’un texte, les formules mathématiques sont délimitées par un dollar, alors que les formules devant apparaître sur une ligne séparée sont délimitées par deux dollars. On tape par exemple :
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 $x^2+y^2=0  et  x+y=0$
 ```
 
@@ -161,7 +159,7 @@ on obtient :
 
 alors que si on tape :
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 $x^2+y^2=0 \text{ et } x+y=0$
 ```
 
@@ -175,9 +173,9 @@ on obtient (la commande `\text` permet d’écrire du texte dans une formule) :
 On peut aussi obtenir une équation numérotée avec l’environnement equation :
 
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 \begin{equation} \label{eq:def_x}
-x =3D \sqrt{y+z}
+x = \sqrt{y+z}
 \end{equation}
 ```
 
@@ -185,13 +183,17 @@ ce qui donne :\
 
 ![tt](./numbered.png)
 
-### Les fractions
+Pour tester les expressions sans compiler, le site
+[codecogs](https://www.codecogs.com/latex/eqneditor.php) est très utile.
 
-Une fraction s=E2=80=99obtient avec la commande=20 [\\ -.05truein
-frac]{style="3D"font-family:monospace""} ([\\ -.05truein
-overline]{style="=3D"font-family:monospace""} surligne)
 
-``` {.3D"verbatim"}
+
+### Les fractions
+
+Une fraction s’obtient avec la commande `\frac` (`\overline` surligne)
+
+
+``` {."verbatim"}
 \[\frac{x}{2y}= 0.4\overline{230769}\]
 ```
 
@@ -207,9 +209,9 @@ Les indices s’obtiennent avec le caractère _ , les exposants avec le caractè
 
 Exemple :
 
-``` {.3D"verbatim"}
-\[x_1=3D{(a^2+b^2)}^\frac{ 1 }{2}\]
-\[\overrightarrow{OA_{1,i}}=3Dx^{2t}\cdot \overrightarrow{OB_i}\]
+``` {."verbatim"}
+\[x_1={(a^2+b^2)}^\frac{ 1 }{2}\]
+\[\overrightarrow{OA_{1,i}}=x^{2t}\cdot \overrightarrow{OB_i}\]
 ```
 
 donne :
@@ -217,488 +219,282 @@ donne :
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_1={(a^2&plus;b^2)}^\frac{&space;1&space;}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_1={(a^2&plus;b^2)}^\frac{&space;1&space;}{2}" title="x_1={(a^2+b^2)}^\frac{ 1 }{2}" /></a>
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\overrightarrow{OA_{1,i}}=x^{2t}\cdot&space;\overrightarrow{OB_i}\" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\overrightarrow{OA_{1,i}}=x^{2t}\cdot&space;\overrightarrow{OB_i}\" title="\overrightarrow{OA_{1,i}}=x^{2t}\cdot \overrightarrow{OB_i}\" /></a>
- 
 
-#### 4.3.1  Les racines {#3D"sec16" .3D"subsubsection"}
+#### Le flêches
 
-&lt;= !--SEC END --&gt;
+``` 
+\Rightarrow, \Leftarrow, \Leftrightarrow
+```
 
-Une racine s=E2=80=99obtient avec la commande :
+<a href="https://www.codecogs.com/eqnedit.php?latex=\Rightarrow,&space;\Leftarrow,&space;\Leftrightarrow" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Rightarrow,&space;\Leftarrow,&space;\Leftrightarrow" title="\Rightarrow, \Leftarrow, \Leftrightarrow" /></a> 
 
-``` {.3D"verbatim"}
-\[\sqrt{x^2+1}\]
-\[\sqrt[3]{x^2+1}\]
+####  Les racines
+Une racine s’obtient avec la commande :
+
+
+``` {."verbatim"}
+\[\sqrt{x^2+1},\, \sqrt[3]{x^2+1}\]
 ```
 
 donne :
 
-+-----------------------------------+-----------------------------------+
-| [=                                |   ------------------------------- |
-| =E2=88=9A]{style="3D"font-size:x- | ---------                         |
-| large""}                          |   [x]{style="3D"font-=" italic"=" |
-|                                   | "}^2^+1                           |
-|                                   |   ------------------------------- |
-|                                   | ---------                         |
-+-----------------------------------+-----------------------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sqrt{x^2&plus;1},\,&space;\sqrt[3]{x^2&plus;1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sqrt{x^2&plus;1},\,&space;\sqrt[3]{x^2&plus;1}" title="\sqrt{x^2+1},\, \sqrt[3]{x^2+1}" /></a>
 
-+-----------------------------------+-----------------------------------+
-| [=E2=                             |   ------------------------------- |
-| =88=9B]{style="3D"font-size:x-lar | ---------                         |
-| ge""}                             |   [x]{style="3D"font-=" italic"=" |
-|                                   | "}^2^+1                           |
-|                                   |   ------------------------------- |
-|                                   | ---------                         |
-+-----------------------------------+-----------------------------------+
 
-#### 4.3.2  Les limites {#3D"sec17" .3D"subsubsection"}
 
-&lt;= !--SEC END --&gt;
+#### Les limites
+Une limite s’obtient avec la commande : `\lim{ ...}`
 
-Une limite s=E2=80=99obtient avec la commande :=20 [\\ -.05truein lim {
-...}]{style="3D"font-family:monospace""}
+Pour écrire les fonctions mathématiques 
+on les fait précéder de \ . On tape :
 
-= Pour =C3=A9crire les fonctions math=C3=A9matiques on les fait
-pr=C3=A9c=C3= =A9der de [\\ ]{style="3D"font-family:monospace""}. On
-tape :
-
-``` {.3D"verbatim"}
-=20
-\[\lim_{x \rightarrow +\infty} \ln (x) =3D +\infty\]
+``` {."verbatim"}
+\[\lim_{x \rightarrow +\infty} \ln (x) = +\infty\]
 ```
 
 pour obtenir :
 
-+-----------------------------------+-----------------------------------+
-|   ------------------------------- |  ln([x]{style="3D"font-style="    |
-| ----------------------------      | italic"=""}) =3D +=E2=88=9E       |
-|                                   |                                   |
-|   lim                             |                                   |
-|   [x]{style="3D"font-sty=" italic |                                   |
-| "=""} =E2=86=92 +=E2=88=9E        |                                   |
-|   ------------------------------- |                                   |
-| ----------------------------      |                                   |
-+-----------------------------------+-----------------------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\lim_{x&space;\rightarrow&space;&plus;\infty}&space;\ln&space;(x)&space;=&space;&plus;\infty\" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\lim_{x&space;\rightarrow&space;&plus;\infty}&space;\ln&space;(x)&space;=&space;&plus;\infty\" title="\lim_{x \rightarrow +\infty} \ln (x) = +\infty\" /></a>
 
-### 4.4  Les matrices {#3D"sec18" .3D"subsection"}
+### Les matrices
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 \[\left(\begin{array}{ccc}
  2 & 3 & 4\\ x & x^2 & x^3\\ 5 & 6 & 7
 \end{array}\right)\]
 ```
 
-donne=20
+donne:
 
-+-----------------------+-----------------------+-----------------------+
-| =E2=8E=9B\            |   ------------------- | =E2=8E=9E\            |
-| =E2=8E=9C\            | ---------------- ---- | =E2=8E=9F\            |
-| =E2=8E=9C\            | --------------------- | =E2=8E=9F\            |
-| =E2=8E=9D             | -------------- ------ | =E2=8E=A0             |
-|                       |    2                  |                       |
-|                       |                  3    |                       |
-|                       |                       |                       |
-|                       |                = 4    |                       |
-|                       |   [x]{style="3D"font- |                       |
-|                       | =" italic"=""}   [x]{ |                       |
-|                       | style="3D"font-style: |                       |
-|                       | italic""}^2^   x^3^   |                       |
-|                       |   5                   |                       |
-|                       |                  6    |                       |
-|                       |                       |                       |
-|                       |                7      |                       |
-|                       |   ------------------- |                       |
-|                       | ---------------- ---- |                       |
-|                       | --------------------- |                       |
-|                       | -------------- ------ |                       |
-+-----------------------+-----------------------+-----------------------+
+<img src="https://latex.codecogs.com/gif.latex?\left(\begin{array}{ccc}&space;2&space;&&space;3&space;&&space;4\\&space;x&space;&&space;x^2&space;&&space;x^3\\&space;5&space;&&space;6&space;&&space;7&space;\end{array}\right)" title="\left(\begin{array}{ccc} 2 & 3 & 4\\ x & x^2 & x^3\\ 5 & 6 & 7 \end{array}\right)" /></a>
 
-### 4.5  Les int=C3=A9grales et= les s=C3=A9ries {#3D"sec19" .3D"subsection"}
+### Fonctions définies par morceaux
 
-``` {.3D"verbatim"}
-\[\int_a^b f(t)=
- \; dt\]
+```
+|x| = \left \{ \begin{array}{cc}
+  -x & x < 0\\ 
+x & x \geq 0\\
+ \end{array}\right . 
+ ```
+
+ <a href="https://www.codecogs.com/eqnedit.php?latex=|x|&space;=&space;\left&space;\{&space;\begin{array}{cc}&space;-x&space;&&space;x&space;<&space;0\\&space;x&space;&&space;x&space;\geq&space;0\\&space;\end{array}\right&space;." target="_blank"><img src="https://latex.codecogs.com/gif.latex?|x|&space;=&space;\left&space;\{&space;\begin{array}{cc}&space;-x&space;&&space;x&space;<&space;0\\&space;x&space;&&space;x&space;\geq&space;0\\&space;\end{array}\right&space;." title="|x| = \left \{ \begin{array}{cc} -x & x < 0\\ x & x \geq 0\\ \end{array}\right ." /></a>
+
+
+### Les ensembles
+
+#### Les nombres réels, entiers etc. :
+
+```
+\mathbb{R}^*, \mathbb{Z}, \mathbb{Q}, \mathbb{N}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mathbb{R}^*,&space;\mathbb{Z},&space;\mathbb{Q},&space;\mathbb{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathbb{R}^*,&space;\mathbb{Z},&space;\mathbb{Q},&space;\mathbb{N}" title="\mathbb{R}^*, \mathbb{Z}, \mathbb{Q}, \mathbb{N}" /></a>
+#### Définition d'une fonction
+
+```
+f : \mathbb{R} \rightarrow \mathbb{C},\, t \mapsto e^{it}
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=f&space;:&space;\mathbb{R}&space;\rightarrow&space;\mathbb{C},\,&space;t&space;\mapsto&space;e^{it}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f&space;:&space;\mathbb{R}&space;\rightarrow&space;\mathbb{C},\,&space;t&space;\mapsto&space;e^{it}" title="f : \mathbb{R} \rightarrow \mathbb{C},\, t \mapsto e^{it}" /></a>
+
+#### Intersection, réunion : 
+
+```
+A \cap B,\,A \cup B,\, \bigcup_{i} A_i,\, \bigcap_{i} A_i
+```
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\cap&space;B,\,A&space;\cup&space;B,\,&space;\bigcup_{i}&space;A_i,\,&space;\bigcap_{i}&space;A_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\cap&space;B,\,A&space;\cup&space;B,\,&space;\bigcup_{i}&space;A_i,\,&space;\bigcap_{i}&space;A_i" title="A \cap B,\,A \cup B,\, \bigcup_{i} A_i,\, \bigcap_{i} A_i" /></a>
+
+### Les intégrales et les séries
+
+
+``` {."verbatim"}
+\[\int_a^b f(t)\; dt\]
 ```
 
 donne
 
-+-----------------------+-----------------------+-----------------------+
-| =E2=88=AB             |   ------------------- |  [f]{style="3D"font-s |
-|                       | --------------------- | tyle:it="             |
-|                       |   [b]{style="3D"font- | alic"=""}([t]{style=" |
-|                       | style:italic""}=      | 3D"font-style:italic" |
-|                       |                       | "})  dt               |
-|                       |   \                   |                       |
-|                       |   \                   |                       |
-|                       |                       |                       |
-|                       |   [a]{style="3D"font- |                       |
-|                       | style=" italic"=""}   |                       |
-|                       |   ------------------- |                       |
-|                       | --------------------- |                       |
-+-----------------------+-----------------------+-----------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\int_a^b&space;f(t)\;&space;dt\" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\int_a^b&space;f(t)\;&space;dt\" title="\int_a^b f(t)\; dt\" /></a>
 
-\
 
-``` {.3D"verbatim"}
-$\sum_{i=3D0}^{+\infty} \frac{1}{i^2}$ et \[\su=
-m_{i=3D0}^{+\infty} \frac{1}{i^2}\]
+
+``` {."verbatim"}
+$\sum_{i=0}^{+\infty} \frac{1}{i^2}$ et \[\sum_{i=0}^{+\infty} \frac{1}{i^2}\]
 ```
 
-donne : =E2=88=91~[i]{style="3D"font-style:italic""}=\ =3D0~^+=E2=88=9E^
-1/i^2^ et
+donne : 
 
-+-----------------------+-----------------------+-----------------------+
-|   ------------------- |                       |                       |
-| --------------------- |                       |                       |
-| --------              |                       |                       |
-|   +=E2=88=9E          |                       |                       |
-|   [=E2=88=91]{style=" |                       |                       |
-| 3D"font-siz=" xx-larg |                       |                       |
-| e"=""}                |                       |                       |
-|   [i]{style="3D"font- |                       |                       |
-| sty=" italic"=""}=3D0 |                       |                       |
-|   ------------------- |                       |                       |
-| --------------------- |                       |                       |
-| --------              |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| 1                     |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-|                       |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| [i]{style="3D"font-st |                       |                       |
-| y="                   |                       |                       |
-| italic"=""}^2^        |                       |                       |
-+-----------------------+-----------------------+-----------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i=0}^{&plus;\infty}&space;\frac{1}{i^2},\,\sum_{i=0}^{&plus;\infty}&space;\frac{1}{i^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{i=0}^{&plus;\infty}&space;\frac{1}{i^2},\,\sum_{i=0}^{&plus;\infty}&space;\frac{1}{i^2}" title="\sum_{i=0}^{+\infty} \frac{1}{i^2},\,\sum_{i=0}^{+\infty} \frac{1}{i^2}" /></a> 
 
- 
+###  Les derivées
+On utilise la commande `\prime` ou ’
 
-### 4.6  Les deriv=C3=A9es {#3D"sec20" .3D"subsection"}
 
-=
-
-On utilise la commande [\\ -.05truein p=
-rime]{style="3D"font-family:monospace""} ou
-[=E2=80=99]{style="3D"font-family:monospace""}
-
-``` {.3D"verbatim"}
-\[ f'(x)=3D(\exp(2x))^\prime=3D2\exp(2x)\]
+``` {."verbatim"}
+\[ f'(x)=(\exp(2x))^\prime=2\exp(2x)\]
 ```
 
 donne
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   [f]{style="3D"font-style:italic""}= =E2=80=B2([x]{style="3D"font-style:italic""})=3D(exp(2[x]{style="=3D"font-style:italic""}))^=E2=80=B2^=3D2exp(2[x]{style="=3D"font-style:italic""})
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a href="https://www.codecogs.com/eqnedit.php?latex=f'(x)=(\exp(2x))^\prime=2\exp(2x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f'(x)=(\exp(2x))^\prime=2\exp(2x)" title="f'(x)=(\exp(2x))^\prime=2\exp(2x)" /></a>
 
-Pour la d=C3=A9riv=C3=A9e seconde, utiliser `f'{'}`. Pour les
-deriv=C3=A9es partielles on utilise [\\ -.05truein
-partial]{style="3D"font-family:mon=" ospace"=""} :
+Pour la dérivée seconde, utiliser `f'{'}`. Pour les derivées partielles on utilise `\partial` :
 
-``` {.3D"verbatim"}
-\[ \frac{\partial f(x,y)}{\partial x}=3D2\exp(2=
-x)\]
+``` {."verbatim"}
+\[ \frac{\partial f(x,y)}{\partial x}=2\exp(2= x)\]
 ```
 
 donne
 
-+-----------------------+-----------------------+-----------------------+
-|                       |   ------------------- | =3D2exp(2[x]{style="3 |
-|                       | --------------------- | D"font-style="        |
-|                       | --------------------- | italic"=""})          |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | -----                 |                       |
-|                       |   =E2=88=82&= nbsp;[f |                       |
-|                       | ]{style="3D"font-styl |                       |
-|                       | e:italic""}([x]{style |                       |
-|                       | ="3D"font-style:i=" t |                       |
-|                       | alic"=""},[y]{style=" |                       |
-|                       | 3D"font-style:italic" |                       |
-|                       | "})                   |                       |
-|                       |   =E2=88=82 [x]{st="y |                       |
-|                       | le=3D"font-style:ital |                       |
-|                       | ic""}                 |                       |
-|                       |   ------------------- |                       |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | --------------------- |                       |
-|                       | -----                 |                       |
-+-----------------------+-----------------------+-----------------------+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;f(x,y)}{\partial&space;x}=2\exp(2x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;f(x,y)}{\partial&space;x}=2\exp(2x)" title="\frac{\partial f(x,y)}{\partial x}=2\exp(2x)" /></a>
 
-5  =C3=89nonc=C3=A9s {#3D"sec21" .3D"section"}
---------------------
+## Énoncés
+Pour mettre en valeur théorèmes, propositions, lemmes et autres corollaires, on crée des environnements avec la commande newtheorem. Ces environnements peuvent partager le même compteur ou avoir des compteurs séparés. On saisit au début du document :
 
-Pour mettre en valeur th=C3=A9or=C3=A8mes, propositions, lemmes et
-autres corollaires, on cr=C3=A9e des environnements avec la commande=20
-`newtheorem`. Ces environnements peuvent partager le m=C3=AAme compteur
-ou avoir des compteurs s=C3=A9par=C3=A9s. On saisit au d=C3=A9but = du
-document :
-
-``` {.3D"verbatim"}
-\newtheorem{thm}{Th=C3=A9or=C3=A8me}
+``` {."verbatim"}
+\newtheorem{thm}{Théorème}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{defn}{D\'efinition}
 ```
 
-Ici, `thm` et `prop` partagent le m=C3=AAme = compteur, mais pas `defn`.
+Ici, `thm` et `prop` partagent 
+le même compteur, mais pas defn.
 
-Puis pour cr=C3=A9er un =C3=A9nonc=C3=A9, on tape=\
+Puis pour créer un énoncé, on tape
+
 `\begin{thm}`\
 `` \'Enonc\'e du th\'eor\`eme ``\
 `\end{thm}`\
 et on obtient
 
-<div class="3D"theorem"">
+![img](./thm.png)
 
-[Th=C3=A9or=C3= =A8me 1]{style="3D"font-weight:bold""}  
-*=C3=89nonc=C3=A9 du th=C3=A9or=C3=A8me*
+# Références et citations
+On crée explicitement une référence avec la commande \label{} et un nom de label entre les accolades. La référence correspond au numéro de section, sauf si on se trouve dans une environnement d’équation numérotée. On y fait ensuite référence avec la commande \ref{} (et \pageref{} pour indiquer la page).
 
-</div>
+Certaines commandes, comme \tableofcontents utilisent des références crées implicitement (numéro de section).
 
-6  R=C3=A9f=C3=A9rences et cit= ations {#3D"sec22" .3D"section"}
---------------------------------------
+Les citations d’oeuvre sont en général gérées par un programme externe, bibtex à partir d’un fichier de base de données bibliographiques. On utilise les commandes (menu LaTeX dans Texmaker)
 
-On cr=C3=A9e explicitement une r=C3=A9f=C3=A9rence avec la commande
-`\= label{}` et un nom de label entre les accolades. La
-r=C3=A9f=C3=A9rence correspond au n= um=C3=A9ro de section, sauf si on
-se trouve dans une environnement d=E2=80=99=C3=A9quatio= n
-num=C3=A9rot=C3=A9e.=20 On y fait ensuite r=C3=A9f=C3=A9rence avec la
-commande `\ref{}` (et `\pageref{}` pour indiquer l= a page).
+- \cite{} pour citer une oeuvre, avec en paramètre la référence de l’oeuvr
+- \bibliiography{} pour indiquer le nom de fichier de la base de données bibliographique,
+- \bibliographystyle{abbrv} pour spécifier un style d’affichage des citations (ici abbrv pour abrégé),
 
-Certaines commandes, comme `\tableofcontents` uti= lisent des
-r=C3=A9f=C3=A9rences cr=C3=A9es implicitement (num=C3=A9ro de section).
 
-Les citations d=E2= =80=99oeuvre sont en g=C3=A9n=C3=A9ral
-g=C3=A9r=C3=A9es par un programme ex= terne, `bibtex` =C3=A0 partir
-d=E2=80=99un fichier de base de donn=C3=A9es bibliographiques= . On
-utilise les commandes (menu `LaTeX` dans Texmaker)
+Exemple, on crée un fichier mabiblio.bib contenant (dans Texmaker, utilisez le menu Bibliographie pour aider la saisie) :
 
--   `\cite{}` pour citer une oeuvre, avec en param=C3=A8tre la r=C3=
-    =A9f=C3=A9rence de l=E2=80=99oeuvre
--   `\bibliiography{}` pour indiquer l= e nom de fichier de la base de
-    donn=C3=A9es bibliographique,
--   `\bibliographystyle{abbrv}` pour s= p=C3=A9cifier un style
-    d=E2=80=99affichage des citations (ici `abbrv` pour
-    abr=C3=A9g=C3=A9),
 
-Exemple, on cr=C3=A9e un fichier `mabiblio.bib` contenant (dans
-Texmaker, utilisez le menu `Bibliographie` pour aider la saisie)=  :
-
-``` {.3D"verbatim"}
+``` {."verbatim"}
 @ book {Leborgne,
-  AUTHOR=3D"D. Leborgne",
-  TITLE=3D"{Calcul diff\'erentiel et g\'eom\'etrie}",
-  PUBLISHER=3D"PUF",
-  YEAR=3D"1982" }
+  AUTHOR="D. Leborgne",
+  TITLE="{Calcul diff\'erentiel et g\'eom\'etrie}",
+  PUBLISHER="PUF",
+  YEAR="1982" }
 ```
 
 puis on ajoute dans le source latex une fois
-`\bibliiography{= mabiblio.bib}` et `\bibliographystyle{abbrv}`, et
-`\cite{Leborgne}` = autant de fois que n=C3=A9cessaire. Sauvegarder le
+`\bibliiography{mabiblio.bib}` et `\bibliographystyle{abbrv}`, et
+`\cite{Leborgne}`  autant de fois que nécessaire. Sauvegarder le
 fichier `mabiblio.bib`.
 
-De= puis texmaker, revenir au fichier tex, puis avant-dernier menu de la
-barre d=E2=80=99outil, faire une compilation latex ou pdflatex, puis
-s=C3=A9lectionner bibtex comme compilateur, compiler, puis
-s=C3=A9lectionner =C3=A0 nouveau latex ou pdflatex et compiler 2 fois.
-En ligne de commande, taper\
+Depuis texmaker, revenir au fichier tex, puis avant-dernier menu de la barre d’outil, faire une compilation latex ou pdflatex, puis sélectionner bibtex comme compilateur, compiler, puis sélectionner à nouveau latex ou pdflatex et compiler 2 fois. En ligne de commande, taper
 `latex essai`\
 `bibtex essai`\
 `latex essai`\
 `latex essai`
 
-7  Espaces, ponctuation, c=C3= =A9sure. {#3D"sec23" .3D"section"}
----------------------------------------
+Espaces, ponctuation, césure.
+La philosophie de LATEX est de laisser le compilateur gérer les espaces, cependant il peut se produire qu’il soit nécessaire d’en ajouter. Les commandes \, \ \quad \qquad permettent d’ajouter un espacement horizontal de taille de plus en plus grande. On peut aussi utiliser \hspace{0.3cm} où l’argument est une longueur (avec une unité) pour un espacement horizontal, \vspace{0.2cm} pour un espacement vertical.
 
-La philosophie de L^A^T~E~X est de laisser le compilateur= g=C3=A9rer
-les espaces, cependant il peut se produire qu=E2=80=99il soit
-n=C3=A9cessaire d=E2=80=99en ajouter. Les commandes `\, \ \quad \qquad`
-permettent d=E2=80=99ajouter un espacement horizontal de taille de plus
-en plus grande. On peut aussi utiliser `\hspace{0.3cm}` o=C3=B9
-l=E2=80=99argument est une longueur (avec une unit=C3=A9) pour un
-espacemen= t horizontal, `\vspace{0.2cm}` pour un espacement vertical.
+L’espacement en début de paragraphe peut être omis par la commande \noindent.
 
-= L=E2=80=99espacement en d=C3=A9but de paragraphe peut =C3=AAtre omis
-par la commande `\noindent`.
+La commande \\ force un saut de ligne, la commande \pagebreak force un saut de page.
 
-La commande `\\` force un= saut de ligne, la commande `\pagebreak` force
-un saut de page.
+Les règles de ponctuation en français imposent de mettre toujours un espace après le signe de ponctuation, et d’en mettre un avant si le signe de ponctuation possède deux composantes connexes. Dans ce cas on utilise un espace insécable ~ pour éviter que le signe de ponctuation se trouve tout seul sur une ligne.
 
-Les r=C3= =A8gles de ponctuation en fran=C3=A7ais imposent de mettre
-toujours un espace apr=C3=A8s le signe de ponctuation, et d=E2=80=99en
-mett= re un avant si le signe de ponctuation poss=C3=A8de deux
-composantes connexes. Dans ce cas on utilise un espace ins=C3=A9cable
-`~` pour =C3=A9viter que le signe de ponctuation se trouve tout seul sur
-une ligne.
+En principe, LATEX sait où couper dans un mot pour passer à la ligne, mais il peut être nécessaire de l’aider, en particulier si le mot contient des accents, on ajoute alors des \- pour séparer les syllabes du mot.
 
-En principe, L^A^T~E~X sait o=C3=B9 couper d= ans un mot pour passer
-=C3=A0 la ligne, mais il peut =C3=AAtre n=C3=A9cessaire de
-l=E2=80=99aider,= en particulier si le mot contient des accents, on
-ajoute alors des `\- pour s=C3=A9parer les syllabes du mot. `
 
-8  Ins=C3=A9rer un graphique {#3D"sec24" .3D"section"}
-----------------------------
+##  Insérer un graphique
+On peut insérer une image au format EPS/png/jpg/pdf (encapsulated postscript) dans un source LATEX de la manière suivante :
 
-On peut ins=C3=A9rer une image au format EPS (encapsulated
-postscript)=20 dans un source L^A^T~E~X de la mani=C3=A8re suivante = ;:
 
-``` {.3D"verbatim"}
-\includegraphics[width=3D\textwidth]{image}
+``` {."verbatim"}
+\includegraphics[width=\textwidth]{image}
 ```
 
-o=C3=B9 [image]{style="3D"font-family:monospace""} d=C3=A9= signe le nom
-du fichier `image.eps`. On peut aussi indiquer une largeur en
-centim=C3=A8tres apr=C3=A8s `width=3D`. La commande Unix
-[convert]{style="3D"font-family:monospace""} perme= t de convertir une
-image d=E2=80=99un autre format vers le format Encapsulated Postscript,
-par exemple
+où image désigne le nom du fichier image.eps. On peut aussi indiquer une largeur en centimètres après width=. La commande Unix convert permet de convertir une image d’un autre format vers le format Encapsulated Postscript, par exemple
 
-``` {.3D"verbatim"}
+``` {."verbatim"}
 convert image.png image.eps
 ```
 
-Il faut avoir d=C3=A9clar=C3=A9 en t=C3=AAte (avant
-`\begin{d= ocument}`) du fichier source :
-
-``` {.3D"verbatim"}
+Il faut avoir déclaré en tête 
+(avant `\begin{document}`) du fichier source : 
+``` {."verbatim"}
 \usepackage{graphicx}
 ```
 
-9  Cr=C3=A9er des transparents= . {#3D"sec25" .3D"section"}
----------------------------------
+## Hyperref
 
-Pour cr=C3=A9er des transparents, on utilise fr=C3=A9quemment la classe
-de = document `beamer`. Cf. par exemple le tutoriel sur\
-`http://www.tuteurs.ens.fr/logiciels/latex/beamer.html`.
+Le package hyperref offre à LaTeX la possibilité de créer des hyperliens dans le document. Il fonctionne avec pdflatex et aussi avec le "latex" standard utilisé avec dvips et ghostscript ou dvipdfm pour construire un fichier PDF. Si vous le chargez, vous aurez la possibilité d'inclure des liens externes interactifs et toutes vos références internes seront transformées en hyperliens. Le compilateur pdflatex permet de créer des fichiers PDF directement à partir de la source LaTeX, et PDF prend en charge plus de fonctionnalités que DVI. En particulier, PDF prend en charge les hyperliens. De plus, le PDF peut contenir d'autres informations sur un document telles que le titre, l'auteur, etc., qui peuvent être éditées à l'aide de ce même package.
 
-10  Interaction avec des logic= iels de calcul. {#3D"sec26" .3D"section"}
------------------------------------------------
 
-De nombreux logiciels de calcul scientifique permettent
-d=E2=80=99interagir avec L^A^T~E~X, on donne deux exemples dans cette
-section= .
+```
+\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}
+```
 
-### 10.1  [giac/xcas]{style="3D"font-f=" monospace"=""} {#3D"sec27" .3D"subsection"}
+## Créer des transparents.
+Pour créer des transparents, on utilise fréquemment la classe de document beamer. Cf. par exemple le tutoriel sur
+[ce site.](http://www.tuteurs.ens.fr/logiciels/latex/beamer.html)
 
-Depuis Xcas, vous pouvez copier dans le presse-papier=20 la traduction
-L^A^T~E~X d=E2=80=99une expression ou sous-expression en la
-s=C3=A9lectionnant et en utilisant le raccourci Ctrl-T. On peut aussi
-g=C3=A9n=C3=A9rer facilement un graphique ins=C3=A9ra= ble dans un
-fichier L^A^T~E~X(menu M =C3=A0 droite du graphiq= ue, puis Exporter).
+## Interaction avec des logiciels de calcul.
+De nombreux logiciels de calcul scientifique permettent d’interagir avec LATEX, on donne deux exemples dans cette section.
 
-Vous pouvez compiler avec `hevea` un fichier so= urce L^A^T~E~X
-contenant des commandes de calcul en un document HTML5 interactif
-permettant au lecteur de modifier et/ou ex=C3=A9cuter les commandes de
-calcul depuis le navigateur avec lequel il consulte le document,=20 pour
-plus de d=C3=A9tails, cf.\
+### giac/xcas
+Depuis Xcas, vous pouvez copier dans le presse-papier la traduction LATEX d’une expression ou sous-expression en la sélectionnant et en utilisant le raccourci Ctrl-T. On peut aussi générer facilement un graphique insérable dans un fichier LATEX(menu M à droite du graphique, puis Exporter).
+
+Vous pouvez compiler avec hevea un fichier source LATEX contenant des commandes de calcul en un document HTML5 interactif permettant au lecteur de modifier et/ou exécuter les commandes de calcul depuis le navigateur avec lequel il consulte le document, pour plus de détails, cf.
+
 `http://www-fourier.ujf-grenoble.fr/~parisse/giac/test_fr.tex`
 `http://www-fourier.ujf-grenoble.fr/~parisse/giac/castex.html`
 
-Sous linux, vous pouvez g=C3=A9n=C3=A9rer les deux formats de sortie=
-=20 PDF et HTML5 interactif en utilisant la commande
-[icas]{style="3D"font-family=" monospace"=""} ou giac au lieu de
-[pdflatex]{style="3D"font-family:monospace""}. Il suff= it de cr=C3=A9er
-un document latex normal, y ajouter (juste apr=C3=A8s
-`\begin{document}`) `\begin{giacjsonline}` et (juste avant
+Sous linux, vous pouvez générer les deux formats de sortie PDF et HTML5 interactif en utilisant la commande icas ou giac au lieu de pdflatex. Il suffit de créer un document latex normal, y ajouter 
+(juste après `\begin{document}`) `\begin{giacjsonline}` et (juste avant
 `\end{document}) \end{giacjsonline}`, puis taper des commandes telles
 que `\giacinputbigmath{factor(x^10-1)}` ou `\giacinput{plot(sin(x))}`.
 La compilation s=E2=80=99effectue alors depuis un terminal en tapant la
 commande\
 `giac nomfichier`
 
-Enfin [pgiac]{style="3D"font-family:monospa=" ce"=""} est un programme
-qui permet de faire calculer=20 automatiquement par Giac (le moteur de
-calcul formel de Xcas)=20 certaines expressions d=E2=80=99un fichier
-source au format L^A^T&lt;= sub&gt;EX. Voir le site de J.Michel Sarlat
-pour des exemples\
-`http://melusine.eu.org/syracuse/giac/`
+Enfin pgiac est un programme qui permet de faire calculer automatiquement par Giac (le moteur de calcul formel de Xcas) certaines expressions d’un fichier source au format LATEX. Voir le site de 
+[J.Michel Sarlat](http://melusine.eu.org/syracuse/giac/)
+pour des exemples
 
-### 10.2  [texmacs]{style="3D"font-f=" monospace"=""} {#3D"sec28" .3D"subsection"}
+### texmacs
 
-[texmacs]{style="3D"font-family:monospace""} est un programme perme=
-ttant de saisir des documents math=C3=A9matiques avec une interface
-similaire =C3=A0 celle des logiciels de traitement de texte usuels tout
-en conservant une qualit=C3=A9 typographique comparable =C3=A0 L^A^T~E~=
-X. Il permet d=E2=80=99importer et d=E2=80=99exporter au format L^A^T=
-~E~X.=20 Il poss=C3=A8de =C3=A9galement une interface pour lancer
-certains=20 logiciel de calcul (Menu Inserer, sous-menu session). Pour
-lancer [texmacs]{style="3D"font-family:monospace""} sous Unix,= tapez la
-commande :\
-[texmacs &]{style="3D"font-family:monospace""}
+texmacs est un programme permettant de saisir des documents mathématiques avec une interface similaire à celle des logiciels de traitement de texte usuels tout en conservant une qualité typographique comparable à LATEX. Il permet d’importer et d’exporter au format LATEX. Il possède également une interface pour lancer certains logiciel de calcul (Menu Inserer, sous-menu session). Pour lancer texmacs sous Unix, tapez la commande :
+'texmacs &'
 
-### 10.3  Pour aller plus loin&lt;= /h3&gt; {#3D"sec29" .3D"subsection"}
+##  Pour aller plus loin
 
--   Exemples de distribution LaTeX\
-    Windows: miktex `http://miktex.org/`\
-    Mac: `http://www.tug.org/mactex/`\
-    Linux: rechercher latex sur votre gestionnaire de paquets et
-    s=C3=A9lectionner par exemple texlive
+-   Exemples de distribution LaTeX
+    - Windows: miktex `http://miktex.org/`
+    - Mac: `http://www.tug.org/mactex/`
+    - Linux: rechercher latex sur votre gestionnaire de paquets et sélectionner par exemple [texlive](https://www.tug.org/texlive/).
 -   Le site de Texmaker: `www.xm1math.net/texmaker/index_fr.html`
--   `http://fr.wikibooks.org/wiki/Programmat= ion_LaTeX`
--   `http://www.tuteurs.ens.fr/logiciels/lat= ex/`
--   Le L^A^T~E~X navigator = ;: `http://tex.loria.fr/index.html`
+-   `http://fr.wikibooks.org/wiki/Programmation_LaTeX`
+-   `http://www.tuteurs.ens.fr/logiciels/latex/`
+-   Le LATEX navigator : `http://tex.loria.fr/index.html`
 -   le groupe AmiTeX `http://fr.groups.yahoo.com/group/AmiTeX/`
--   hevea, traducteur vers HTML `hevea.inria.fr`
--   Le site de [texmacs]{style="3D"font-family:monospa=" ce"=""} :
-    [www.texmacs= .org]{style="3D"font-family:monospace""}
+-   [pandoc](https://pandoc.org/demos.html) convertisseur TeX/html/md/pdf
+-   [Le site de texmacs](https://www.texmacs.org)
 
-------------------------------------------------------------------------
 
- [1](3D%22https://www-fourier.ujf-grenoble.fr/~parisse/info/l=){#3D"note1"}
+## Mathjax
 
-:   <div class="3D"fo=" otnotetext"="">
+MathJax est une bibliothèque logicielle JavaScript cross-browser qui affiche les formules mathématiques dans des navigateurs web, en utilisant les balises de AsciiMath (en), LaTeX ou de MathML1. 
+Le projet MathJax a débuté en 2009 comme successeur de jsMath qui est une bibliothèque de formatage des mathématiques2. 
+Il est subventionné par l'American Mathematical Society, Design Science (en) et la Society for Industrial and Applied Mathematics ; le projet est soutenu par des « partenaires » : Stack Exchange Network et American Institute of Physics et des « soutiens », parmi lesquels la American Physical Society, Elsevier, IEEE, la London Mathematical Society, la Optical Society et le Projet Euclide.
 
-    On peut forcer un passage =C3=A0 la ligne sans=20 indentation en
-    tapant [\\ -.07truein\\ ]{style="3D"font-family:monospace""} mais
-    ceci n=E2= =80=99est pas=20 recommand=C3=A9 pour la lisibilit=C3=A9
-    du texte.
-
-    </div>
-
-------------------------------------------------------------------------
-
-> *Ce document a =C3=A9= t=C3=A9 traduit de L^A^T~E~X par* [*H^E^&lt;=
-> /span&gt;V^E^A*](3D%22http://h=)
-
-------MultipartBoundary--x5FiFSfrUUEK9q7Y6zJBjdEAVYzXT8vnHH9UQyMsry----
-Content-Type: text/css Content-Transfer-Encoding: quoted-printable
-Content-Location:
-cid:css-ffe29773-91dc-4fe5-9ee5-514f4ba54ba8@mhtml.blink @charset
-"utf-8"; .li-itemize { margin: 1ex 0ex; } .li-enumerate { margin: 1ex
-0ex; } .dd-description { margin: 0ex 0ex 1ex 4ex; } .dt-description {
-margin: 0ex; } .toc { list-style: none; } .footnotetext { margin: 0ex;
-padding: 0ex; } div.footnotetext p { margin: 0px; text-indent: 1em; }
-.thefootnotes { text-align: left; margin: 0ex; } .dt-thefootnotes {
-margin: 0em; } .dd-thefootnotes { margin: 0em 0em 0em 2em; }
-.footnoterule { margin: 1em auto 1em 0px; width: 50%; } .caption {
-padding-left: 2ex; padding-right: 2ex; margin-left: auto; margin=
--right: auto; } .title { margin: 2ex auto; text-align: center; }
-.titlemain { margin: 1ex 2ex 2ex 1ex; } .titlerest { margin: 0ex 2ex; }
-.center { text-align: center; margin-left: auto; margin-right: auto; }
-.flushleft { text-align: left; margin-left: 0ex; margin-right: auto; }
-.flushright { text-align: right; margin-left: auto; margin-right: 0ex; }
-div table { margin-left: inherit; margin-right: inherit; margin-bottom:
-2px= ; margin-top: 2px; } td table { margin: auto; } table {
-border-collapse: collapse; } td { padding: 0px; } .cellpadding0 tr td {
-padding: 0px; } .cellpadding1 tr td { padding: 1px; } pre { text-align:
-left; margin-left: 0ex; margin-right: auto; } blockquote { margin-left:
-4ex; margin-right: 4ex; text-align: left; } td p { margin: 0px; } .boxed
-{ border: 1px solid black; } .textboxed { border: 1px solid black; }
-.vbar { border: none; width: 2px; background-color: black; } .hbar {
-border: none; height: 2px; width: 100%; background-color: black; }
-.hfill { border: none; height: 1px; width: 200%; background-color:
-black; } .vdisplay { border-collapse: separate; border-spacing: 2px;
-width: auto; em= pty-cells: show; border: 2px solid red; } .vdcell {
-white-space: nowrap; padding: 0px; border: 2px solid green; } .display {
-border-collapse: separate; border-spacing: 2px; width: auto; bor= der:
-none; } .dcell { white-space: nowrap; padding: 0px; border: none; }
-.dcenter { margin: 0ex auto; } .vdcenter { border: 2px solid rgb(255,
-128, 0); margin: 0ex auto; } .minipage { text-align: left; margin-left:
-0em; margin-right: auto; } .marginpar { border: thin solid black; width:
-20%; text-align: left; } .marginparleft { float: left; margin-left: 0ex;
-margin-right: 1ex; } .marginparright { float: right; margin-left: 1ex;
-margin-right: 0ex; } .theorem { text-align: left; margin: 1ex auto 1ex
-0ex; } .part { margin: 2ex auto; text-align: center; }
-------MultipartBoundary--x5FiFSfrUUEK9q7Y6zJBjdEAVYzXT8vnHH9UQyMsry------
+MathJax est utilisé par des sites web MathSciNet, MathOverflow, les journaux du projet Euclide, Scholarpedia, et le portail mathématique russe Общероссийский математический портал5. En revanche, Wikipédia a abandonné son usage.
