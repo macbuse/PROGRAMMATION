@@ -1,24 +1,5 @@
-# Unix/Linux/OS X
+# Linux/OS X
 
-
-```In the beginning there was the command line```
-
-```au commencement était la ligne de commande```
-
-[text](http://cristal.inria.fr/~weis/info/commandline.html)
-
-![img](./command.png)
-
-## Historique 
-
-Unix, officiellement UNIX (parfois écrit « Unix »), est une famille de systèmes d'exploitation multitâche et multi-utilisateur dérivé du Unix d'origine créé par AT&T, le développement de ce dernier ayant commencé dans les années 1970 au centre de recherche de Bell Labs mené par Kenneth Thompson. Il repose sur un interpréteur ou superviseur (le shell) et de nombreux petits utilitaires, accomplissant chacun une action spécifique, commutables entre eux (mécanisme de « redirection ») et appelés depuis la ligne de commande1.
-
-Linux est, au sens restreint, le noyau de système d'exploitation Linux, et au sens large, tout système d'exploitation fondé sur le noyau Linux.  À l'origine, le noyau Linux a été développé pour les ordinateurs personnels compatibles PC, et devait être accompagné des logiciels GNU pour constituer un système d'exploitation. Des partisans du projet GNU promeuvent depuis le nom combiné GNU/Linux. Depuis les années 2000, le noyau Linux est utilisé sur du matériel informatique allant des téléphones portables aux super-ordinateurs, et n'est pas toujours accompagné de logiciels GNU.  C'est notamment le cas d'[Android](https://fr.wikipedia.org/wiki/Android) 
-développé par Google qui équipe plus de 80 % des smartphones..
-
-OS X est le successeur du système Mac OS, principal système d'exploitation d'Apple depuis 1984. 
-Contrairement à ses prédécesseurs, macOS fait partie de la famille des systèmes d'exploitation UNIX, fondé sur les technologies développées par NeXT depuis le milieu des années 1980 jusqu'au rachat de la société par Apple en 1997.
-Son noyau Open Source XNU est un noyau hybride fondé sur le micro-noyau Mach et une version d'UNIX issue de BSD 4.4 lui assurant la compatibilité POSIX.
 
 ## Quelques commandes Unix.
 
@@ -79,7 +60,6 @@ Si rep est un répertoire, mv fichier1.cc rep déplace le fichier1.cc dans le so
 - less : afficher le contenu d'un fichier
 - nano : éditer un fichier texte
 - nano fichier.cc & : ouvre le fichier fichier.cc (le crée s’il n’existe pas).
-- chmod : gérer les permissions d'un fichier
 
     Remarques:
 
@@ -92,8 +72,7 @@ pour en savoir plus sur la commande ls.
 
 ### Exercice :
 
-1. modifier le contenu du fichier xx.txt avec nano puis l'afficier avec les
-1. Copier une page web avec wget et afficher son contenu avec less.
+Copier une page web avec wget et afficher son contenu avec less.
 
 ---
 Pour savoir plus : 
